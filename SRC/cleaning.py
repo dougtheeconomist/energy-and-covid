@@ -48,3 +48,33 @@ create_month(df,sep,'09')
 create_month(df,oct,'10')
 create_month(df,nov,'11')
 create_month(df,dec,'12')
+
+
+#This should be moved to another file
+'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
+# Code used to seperate the 4 digit year from column of strings with year, month
+# where month string is non-numeric
+def seperate(df,varname=str,filepath=str,newfilepath=str)
+''' Code used to seperate the 4 digit year from column of strings with year, month
+where month string is non-numeric, requires column names in csv
+
+df: name of temp dataframe 
+filepath: string, filepath to pull csv file containing unhelpful date formats
+newfilepath: string, filepath to save new csv containing seperated columns
+
+EX: 
+seperate(df2,long,Data/longdates.csv,Data/justdate.csv)
+'''
+    df = pd.read_csv(filepath)
+    df['year'] = None
+    
+    for i in range(df.shape[0]):
+        df.year[i] = int(df.varname[i][:4])
+
+    df['month'] = None
+    for i in range(df.shape[0]):
+        df.month[i] = df.varname[i][6:]
+
+    df.drop([varname],axis=1, inplace=True)
+    df.to_csv(newfilepath)
+'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
