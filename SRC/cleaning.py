@@ -54,6 +54,28 @@ df.info()
 '''
 df = pd.read_csv('Data/use_gen_data.csv')
 
+def first_diff(df, column=str, keep=True):
+    '''
+    appends new column to specified dataframe which has the values of the change from 
+    previous period of a specified existing column
+    df: dataframe object
+    
+    column: name of column to take difference of, string
+    
+    keep(optional): if specified False, drop original column
+    '''
+    place = str(column)
+    new = place + 'diff'
+    df[new] = None
+    for i in range(1, len(df[column])):
+        df[new][i] = (df[column][i]-df[column][i-1])
+    if keep == False:
+        df.drop([column], axis=1, inplace=True)
+
+#creating change variables for all relevant columns
+for i in df.columns[2:21]:
+    first_diff(df,i)
+
 #creating month dummies, retaining original column just in case
 df['m2'] = df.month
 df = pd.get_dummies(df,columns=['m2'])
