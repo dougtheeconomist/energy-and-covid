@@ -6,17 +6,17 @@
 import numpy as np
 import pandas as pd
 
+'''
+THIS CODE BLOCK NO LONGER NEEDED DUE TO ADOPTION OF DIFFERENT CSV FILE WITH
+MORE USEFUL FORMATTING AND MORE COMPLETE DATA
 
-df = pd.read_csv('Data/energy_consumption.csv')
-df.head()
-df.info()
-
+# df = pd.read_csv('Data/energy_consumption.csv')
 #dropping entries for which month code == 13, meaning whole year
 for i in range(df.shape[0]):
     if str(df.year_month[i])[-2:] == '13':
         df.drop(i, axis=0, inplace=True)
 df.shape[0]
-
+'''
 
 def create_month(df,month=str,num=int):
     '''
@@ -35,7 +35,7 @@ def create_month(df,month=str,num=int):
         else:
             continue
     df.rename(columns={'placeholder':month}, inplace=True)
-
+'''
 create_month(df,jan,'01')
 create_month(df,feb,'02')
 create_month(df,mar,'03)'
@@ -48,7 +48,15 @@ create_month(df,sep,'09')
 create_month(df,oct,'10')
 create_month(df,nov,'11')
 create_month(df,dec,'12')
+df = pd.read_csv('Data/use_gen_data.csv')
+df.head()
+df.info()
+'''
+df = pd.read_csv('Data/use_gen_data.csv')
 
+#creating month dummies, retaining original column just in case
+df['m2'] = df.month
+df = pd.get_dummies(df,columns=['m2'])
 
 #This should be moved to another file
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
@@ -77,4 +85,5 @@ seperate(df2,long,Data/longdates.csv,Data/justdate.csv)
 
     df.drop([varname],axis=1, inplace=True)
     df.to_csv(newfilepath)
+    del df
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
