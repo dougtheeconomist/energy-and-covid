@@ -54,6 +54,21 @@ df.info()
 '''
 df = pd.read_csv('Data/use_gen_data.csv')
 
+#creating columns for percentage of total electricity generated for each source
+df['coal_prcnt'] = df.coal_prod / df.total_primary_energy_prod
+df['ng_prcnt'] = df.nat_gas_prod / df.total_primary_energy_prod
+df['c_oil_prcnt'] = df.crude_oil_prod / df.total_primary_energy_prod
+df['ngl_prcnt'] = df.natural_gas_liquids_prod / df.total_primary_energy_prod
+df['tot_fossil_prcnt'] = df.total_ff_prod / df.total_primary_energy_prod
+df['nuke_prcnt'] = df.nuclear_prod / df.total_primary_energy_prod
+df['hydro_prcnt'] = df.hydro_prod / df.total_primary_energy_prod
+df['geo_prcnt'] = df.geothermal_prod / df.total_primary_energy_prod
+df['solar_prcnt'] = df.solar_prod / df.total_primary_energy_prod
+df['wind_prcnt'] = df.wind_prod / df.total_primary_energy_prod
+df['bio_prcnt'] = df.biomass_prod / df.total_primary_energy_prod
+df['tot_renew_prcnt'] = df.total_renewable_prod / df.total_primary_energy_prod
+
+
 def first_diff(df, column=str, keep=True):
     '''
     appends new column to specified dataframe which has the values of the change from 
@@ -73,7 +88,7 @@ def first_diff(df, column=str, keep=True):
         df.drop([column], axis=1, inplace=True)
 
 #creating change variables for all relevant columns
-for i in df.columns[2:21]:
+for i in df.columns[2:]:
     first_diff(df,i)
 
 #creating month dummies, retaining original column just in case
