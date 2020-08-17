@@ -1,7 +1,7 @@
 # Title: energy use data cleaning
 # Author: Doug
 # Date Created: 7/30/2020
-# Last Updated: 8/10/2020
+# Last Updated: 8/17/2020
 
 import numpy as np
 import pandas as pd
@@ -94,6 +94,8 @@ for i in df.columns[2:]:
 #creating month dummies, retaining original column just in case
 df['m2'] = df.month
 df = pd.get_dummies(df,columns=['m2'])
+
+df.to_pickle('Data/energy_820.pkl', compression='zip')
 
 #This should be moved to another file
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
