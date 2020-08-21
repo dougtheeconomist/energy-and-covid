@@ -9,14 +9,25 @@ import matplotlib.pyplot as plt
 #in jupyter
 # %matplotlib inline
 from cleaning import first_diff, clean_to_pickle
+
 # either load pickle:
 df = pd.read_pickle('Data/energy_820.pkl', compression='zip')
 
 # or load csv and manually run clean function:
 clean_to_pickle(Data/use_gen_data.csv, pickle_df=False)
+
+#making date variable for graphing, dropping first row
+df['date'] = 0
+for i in range(df.shape[0]):
+    dt_string = str(df.year[i])+ '-' + str(df.month[i])
+    df.date[i] = pd.Period(dt_string, 'M')
+df.drop(0, axis=0, inplace = True)
+
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~Consumption analysis~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
-# average monthly for comparisson
-df.groupby('month').mean()
+# average monthly for comparison
+df.groupby('month').mean()[['residential_c', 'commercial_c', 'industrial_c',
+       'transportation_c', 'gen_c', 'total_c', 'residential_cdiff', 'commercial_cdiff',
+       'industrial_cdiff', 'transportation_cdiff', 'gen_cdiff', 'total_cdiff']]
 #values for April
 df.iloc[-1][2:8]
 
