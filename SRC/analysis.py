@@ -17,10 +17,19 @@ df = pd.read_pickle('Data/energy_820.pkl', compression='zip')
 clean_to_pickle(Data/use_gen_data.csv, pickle_df=False)
 
 #making date variable for graphing, dropping first row
+def make_date(val1, val2):
+    '''
+    For creating date variable from existing year, month data
+    
+    val1: year
+    val2: month
+    '''
+    date_var = datetime.date(int(val1), int(val2), 1)
+    return date_var
 df['date'] = 0
 for i in range(df.shape[0]):
-    dt_string = str(df.year[i])+ '-' + str(df.month[i])
-    df.date[i] = pd.Period(dt_string, 'M')
+    df.date[i] = make_date(df.year[i],df.month[i])
+
 df.drop(0, axis=0, inplace = True)
 
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~Consumption analysis~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
@@ -40,6 +49,60 @@ current_val = np.array(df.iloc[-1][2:8])
 # Finding the percentage drop of April 2020 from mean
 perc_drop = ((past_ave - current_val)/past_ave)*100
 perc_drop
+
+#graphing trends for most recent years
+dfr = df[df['year'] > 2017]
+
+#grahping total use and change in total use by month
+fig, axs=plt.subplots(2, figsize = (8, 10))
+
+ax = axs[0]
+gdp=ax.plot(dfr.date, dfr.total_c)
+ax.set_xlabel('Time', fontsize = 18)
+ax.set_ylabel('Energy Use',fontsize = 18)
+ax.set_title('Total Energy Use',fontsize = 22, pad = 8)
+ax.tick_params(labelrotation=45, axis='x')
+ax = axs[1]
+gdp=ax.plot(dfr.date, dfr.total_cdiff )
+ax.set_xlabel('Time', fontsize = 18)
+ax.set_ylabel('Use Change From Last Month',fontsize = 18)
+ax.set_title('Monthly Change in Energy Use',fontsize = 22, pad = 8)
+ax.tick_params(labelrotation=45, axis='x')
+plt.tight_layout()
+
+#Graphing monthly use by sector, excluding generation sector
+fig, axs=plt.subplots(2,2, figsize = (15, 10))
+
+ax = axs[0,0]
+gdp=ax.plot(dfr.date, dfr.industrial_c)
+ax.set_xlabel('Time', fontsize = 18)
+ax.set_ylabel('Industrial Use',fontsize = 18)
+ax.set_title('Industrial Energy Use',fontsize = 22, pad = 8)
+ax.tick_params(labelrotation=45, axis='x')
+
+ax = axs[0,1]
+gdp=ax.plot(dfr.date, dfr.transportation_c)
+ax.set_xlabel('Time', fontsize = 18)
+ax.set_ylabel('Transportation Use',fontsize = 18)
+ax.set_title('Transportation Energy Use',fontsize = 22, pad = 8)
+ax.tick_params(labelrotation=45, axis='x')
+
+ax = axs[1,0]
+gdp=ax.plot(dfr.date, dfr.residential_c)
+ax.set_xlabel('Time', fontsize = 18)
+ax.set_ylabel('Residential Use',fontsize = 18)
+ax.set_title('Residential Energy Use',fontsize = 22, pad = 8)
+ax.tick_params(labelrotation=45, axis='x')
+
+ax = axs[1,1]
+gdp=ax.plot(dfr.date, dfr.commercial_c)
+ax.set_xlabel('Time', fontsize = 18)
+ax.set_ylabel('Commercial Use',fontsize = 18)
+ax.set_title('Commercial Energy Use',fontsize = 22, pad = 8)
+ax.tick_params(labelrotation=45, axis='x')
+
+plt.tight_layout()
+
 
 '''~~~~~~~~~~~~~~~~~~~~~~~~~~~~Generation analysis~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
 
