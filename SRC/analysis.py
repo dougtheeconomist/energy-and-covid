@@ -50,6 +50,30 @@ current_val = np.array(df.iloc[-1][2:8])
 perc_drop = ((past_ave - current_val)/past_ave)*100
 perc_drop
 
+#Function to do all of this
+def mean_comparison(first_year,varlist,month_minus_one=int):
+    '''
+    finds mean for given variables by month going back to specified year and 
+    calculates change from mean to 2020 value. prints percentage increase in
+    value and returns list of said changes for variables of interest.
+    
+    first_year: first year of data to include in mean
+    varlist: list of variables within dataframe for comparison
+    month_minus_one: integer, one less than the numerical month of interest
+                     for comparison. For example, to look at April would be 3
+    '''
+    dfp = df[(df['year'] <2020) & (df['year'] >= first_year)]
+    dfg = np.array(dfp.groupby('month').mean()[varlist])
+    past_ave = dfg[month_minus_one]
+    
+    newlist =[]
+    
+    for i in range(len(varlist)):
+        place = ((df[varlist[i]][df.shape[0]] - past_ave[i]) / past_ave[i]) * 100
+        newlist.append(place)
+        print(varlist[i], ':', place)
+    return newlist
+
 #graphing trends for most recent years
 dfr = df[df['year'] > 2017]
 
