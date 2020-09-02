@@ -1,7 +1,7 @@
 # Title: energy use data cleaning
 # Author: Doug
 # Date Created: 7/30/2020
-# Last Updated: 8/17/2020
+# Last Updated: 9/1/2020
 
 import numpy as np
 import pandas as pd
@@ -24,7 +24,19 @@ def first_diff(df, column=str, keep=True):
     if keep == False:
         df.drop([column], axis=1, inplace=True)
 
-def clean_to_pickle(filepath=str,pickle_df=False, newfilepath=Data/energy_820.pkl):
+#making date variable for graphing, dropping first row
+def make_date(val1, val2):
+    '''
+    For creating date variable from existing year, month data
+    
+    val1: year
+    val2: month
+    '''
+    date_var = datetime.date(int(val1), int(val2), 1)
+    return date_var
+
+# Function to encompass all of cleaning, with option to pickle upon completion
+def clean_to_pickle(filepath=str,pickle_df=False, newfilepath='Data/energy_820.pkl'):
     '''
     Loads data from csv file as dataframe object, cleans it, in this case mostly generating new columns
     based on existing data for analysis and saves to pickled file
@@ -65,6 +77,10 @@ def clean_to_pickle(filepath=str,pickle_df=False, newfilepath=Data/energy_820.pk
     df['m2'] = df.month
     df = pd.get_dummies(df,columns=['m2'])
 
+    df['date'] = 0
+    for i in range(df.shape[0]):
+        df.date[i] = make_date(df.year[i],df.month[i])
+
     # dropping first row containing nontype values and converting columns to floats
     df.drop(0, axis=0, inplace = True)
     col_list= ['residential_cdiff', 'commercial_cdiff',
@@ -84,5 +100,6 @@ def clean_to_pickle(filepath=str,pickle_df=False, newfilepath=Data/energy_820.pk
         df.to_pickle(Data/energy_820.pkl, compression='zip')
     else:
         pass
-
+    
+    return df
 
