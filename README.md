@@ -6,7 +6,7 @@ The purpose of this exercise is to take a brief look at electricity consumption 
 
 As a refresher for anyone who hasn’t been following the trading price of crude oil throughout the summer, see the following graph, provided by the EIA.
 
-![eia_graph](/images/potential_oil_prices_eia.png)
+![eia_graph](/images/daily_oil_prices_eia.png)
 
 My expectation prior to actually looking at any of the data is that while commercial and industrial energy use likely fell though not as much as transportation, residential use would rise due to the shift to people spending more of their time at home. Rather than looking at shifts from one month to the next, I am using the average monthly consumption for years in the near past as my benchmark, to avoid seasonal biases. Specifically I average data by month from 2008 through 2019. While I did glance at the simple comparison of 2019 to 2020 data, using a wider lens of comparison gives us a more robust idea of what we should expect to see for the months of March, April and May under more normal circumstances. The following table shows the consumption for the month in 2020, with the difference between that and the average for that month in previous years and the p-value of the t-test to determine whether or not the 2020 value fits within the same historical distribution 
 
