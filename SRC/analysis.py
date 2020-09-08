@@ -139,6 +139,7 @@ tot_post=ax.plot(dfr.date[26:], dfr.total_c[26:], 'm')
 ax.set_xlabel('Time', fontsize = 18)
 ax.set_ylabel('Energy Use',fontsize = 18)
 ax.set_title('Total Energy Use',fontsize = 22, pad = 8)
+ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 ax = axs[1]
 diff_prior=ax.plot(dfr.date[:27], dfr.total_cdiff[:27], 'c')
@@ -146,6 +147,7 @@ diff_post=ax.plot(dfr.date[26:], dfr.total_cdiff[26:], 'm')
 ax.set_xlabel('Time', fontsize = 18)
 ax.set_ylabel('Use Change From Last Month',fontsize = 18)
 ax.set_title('Monthly Change in Energy Use',fontsize = 22, pad = 8)
+ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 plt.tight_layout()
 
@@ -158,6 +160,7 @@ industry_post=ax.plot(dfr.date[26:], dfr.industrial_c[26:], 'm')
 ax.set_xlabel('Time', fontsize = 18)
 ax.set_ylabel('Industrial Use',fontsize = 18)
 ax.set_title('Industrial Energy Use',fontsize = 22, pad = 8)
+ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 
 ax = axs[0,1]
@@ -166,6 +169,7 @@ transport_post=ax.plot(dfr.date[26:], dfr.transportation_c[26:], 'm')
 ax.set_xlabel('Time', fontsize = 18)
 ax.set_ylabel('Transportation Use',fontsize = 18)
 ax.set_title('Transportation Energy Use',fontsize = 22, pad = 8)
+ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 
 ax = axs[1,0]
@@ -174,6 +178,7 @@ residency_post=ax.plot(dfr.date[26:], dfr.residential_c[26:], 'm')
 ax.set_xlabel('Time', fontsize = 18)
 ax.set_ylabel('Residential Use',fontsize = 18)
 ax.set_title('Residential Energy Use',fontsize = 22, pad = 8)
+ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 
 ax = axs[1,1]
@@ -182,6 +187,7 @@ commercial_post=ax.plot(dfr.date[26:], dfr.commercial_c[26:], 'm')
 ax.set_xlabel('Time', fontsize = 18)
 ax.set_ylabel('Commercial Use',fontsize = 18)
 ax.set_title('Commercial Energy Use',fontsize = 22, pad = 8)
+ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 
 plt.tight_layout()
