@@ -10,7 +10,12 @@ As a refresher for anyone who hasn’t been following the trading price of crude
 
 My expectation prior to actually looking at any of the data is that while commercial and industrial energy use likely fell though not as much as transportation, residential use would rise due to the shift to people spending more of their time at home. Rather than looking at shifts from one month to the next, I am using the average monthly consumption for years in the near past as my benchmark, to avoid seasonal biases. Specifically I average data by month from 2008 through 2019. While I did glance at the simple comparison of 2019 to 2020 data, using a wider lens of comparison gives us a more robust idea of what we should expect to see for the months of March, April and May under more normal circumstances. The following table shows the consumption for the month in 2020, with the difference between that and the average for that month in previous years and the p-value of the t-test to determine whether or not the 2020 value fits within the same historical distribution 
 
-This data has been slow to be released; even at the beginning of September only data through the month of May has been published, but what data is available through the U.S Energy Information Administration gives us a useful look at what was happening at the start of the pandemic in the U.S.
+This data has been slow to be released; even at the beginning of September only data through the month of May has been published, but what data is available through the U.S Energy Information Administration gives us a useful look at what was happening at the start of the pandemic in the U.S. The following graph shows the overall energy use in the U.S. since the start of 2018. 
 
-To really understand the electricity use trends during Covid and how they are different from a typical year it’s useful to not only compare overall monthly consumption to previous years, but consumption by source, i.e. residential use vs commercial use, vs industrial use, etc. This gives us a better picture of what is driving any overall changes in usage trends over the first months of the year.  
+![total_use](/images/total_use_trend.png)
+
+As we can see from this graph, total use, which includes transportation uses such as gasoline, declined significantly in April with some bounce-back in May. To really understand the electricity use trends during Covid and how they are different from a typical year it’s useful to not only compare overall monthly consumption to previous years, but consumption by source, i.e. residential use vs commercial use, vs industrial use, etc. This gives us a better picture of what is driving any overall changes in usage trends over the first months of the year.  
+
+![breakdown_by_source](/images/sector_trends.png)
+ 
 
