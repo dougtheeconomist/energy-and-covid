@@ -24,33 +24,33 @@ The following table shows the percentage difference between use in April 2020 an
 
 
 March
-|Sector			               | % Difference from Average | P - Value |
-|------------------------------|:--------------------------|:----------|
-| Residential  	               | -9.85 		               | 0.0351    |
-| Commercial	               | -4.57  		           | 0.2429    |
-| Industrial	               | 6.44   		           | 0.0030    |
-| Transportation               | -10.41  		           | 0.0000    |
-| Energy Generation            | -8.83  		           | 0.0000    |
-| Total                        | -5.87                     | 0.0002    |
+|Sector			               | Difference from Average | P - Value |
+|------------------------------|:------------------------|:----------|
+| Residential  	               | -9.85% 		         | 0.0351    |
+| Commercial	               | -4.57%  		         | 0.2429    |
+| Industrial	               | 6.44%   		         | 0.0030    |
+| Transportation               | -10.41%  		         | 0.0000    |
+| Energy Generation            | -8.83%  		         | 0.0000    |
+| Total                        | -5.87%                  | 0.0002    |
 
 April
-|Sector			               | % Difference from Average | P - Value |
-|------------------------------|:--------------------------|:----------|
-| Residential  	               | 11.84 		               | 0.0076    |
-| Commercial	               | 3.03  		               | 0.3617    |
-| Industrial	               | -2.99  		           | 0.0959    |
-| Transportation               | -29.9  		           | 0.0000    |
-| Energy Generation            | -11.61  		           | 0.0000    |
-| Total                        | -13.03                    | 0.0000    |
+|Sector			               | Difference from Average | P - Value |
+|------------------------------|:------------------------|:----------|
+| Residential  	               | 11.84% 	             | 0.0076    |
+| Commercial	               | 3.03% 		             | 0.3617    |
+| Industrial	               | -2.99%  		         | 0.0959    |
+| Transportation               | -29.9% 		         | 0.0000    |
+| Energy Generation            | -11.61%  		         | 0.0000    |
+| Total                        | -13.03%                 | 0.0000    |
 
 As we can see from the higher p-values, the change in commercial and industrial use don't really fall outside of the range of normal use, 
 
 May
-|Sector			               | % Difference from Average | P - Value |
-|------------------------------|:--------------------------|:----------|
-| Residential  	               | 23.64 		               | 0.0000    |
-| Commercial	               | 6.79  		               | 0.0209    |
-| Industrial	               | -1.83  		           | 0.3447    |
-| Transportation               | -22.64  		           | 0.0000    |
-| Energy Generation            | -10.96  		           | 0.0000    |
-| Total                        | -10.52                    | 0.0000    |
+|Sector			               | Difference from Average | P - Value |
+|------------------------------|:------------------------|:----------|
+| Residential  	               | 23.64% 	             | 0.0000    |
+| Commercial	               | 6.79%  	             | 0.0209    |
+| Industrial	               | -1.83%  		         | 0.3447    |
+| Transportation               | -22.64%  		         | 0.0000    |
+| Energy Generation            | -10.96%  		         | 0.0000    |
+| Total                        | -10.52%                 | 0.0000    |
