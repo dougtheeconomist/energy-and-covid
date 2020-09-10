@@ -17,5 +17,40 @@ This data has been slow to be released; even at the beginning of September only 
 As we can see from this graph, total use, which includes transportation uses such as gasoline, declined significantly in April with some bounce-back in May. To really understand the electricity use trends during Covid and how they are different from a typical year it’s useful to not only compare overall monthly consumption to previous years, but consumption by source, i.e. residential use vs commercial use, vs industrial use, etc. This gives us a better picture of what is driving any overall changes in usage trends over the first months of the year.  
 
 ![breakdown_by_source](/images/sector_trends.png)
- 
 
+As we see here it is predominantly the fall in industrial and transportation use that drives the change we see in the overall trend. While residential and commercial energy use are falling, they are doing so in line with the annual trends in those areas. In fact when compared to the typical use for the months of April and May, there was actually more energy use by residencies and commercial properties during covid. The increase in residential use makes sense since people are spending more time at home, but the slight increase in commercial usage is a surprise to see, especially with many businesses having temporarily closed during that time. 
+
+The following table shows the percentage difference between use in April 2020 and the typical use for the month of April since 2008, with a p-value generated against a null hypothesis that the 2020 numbers are actually the normal for that month, so the interpretation of this p-value is the chance that under normal conditions we would see either this or more extreme levels of consumption in the given sector.  
+
+
+March
+|Sector			               | % Difference from Average | P - Value |
+|------------------------------|:--------------------------|:----------|
+| Residential  	               | -9.85 		               | 0.0351    |
+| Commercial	               | -4.57  		           | 0.2429    |
+| Industrial	               | 6.44   		           | 0.0030    |
+| Transportation               | -10.41  		           | 0.0000    |
+| Energy Generation            | -8.83  		           | 0.0000    |
+| Total                        | -5.87                     | 0.0002    |
+
+April
+|Sector			               | % Difference from Average | P - Value |
+|------------------------------|:--------------------------|:----------|
+| Residential  	               | 11.84 		               | 0.0076    |
+| Commercial	               | 3.03  		               | 0.3617    |
+| Industrial	               | -2.99  		           | 0.0959    |
+| Transportation               | -29.9  		           | 0.0000    |
+| Energy Generation            | -11.61  		           | 0.0000    |
+| Total                        | -13.03                    | 0.0000    |
+
+As we can see from the higher p-values, the change in commercial and industrial use don't really fall outside of the range of normal use, 
+
+May
+|Sector			               | % Difference from Average | P - Value |
+|------------------------------|:--------------------------|:----------|
+| Residential  	               | 23.64 		               | 0.0000    |
+| Commercial	               | 6.79  		               | 0.0209    |
+| Industrial	               | -1.83  		           | 0.3447    |
+| Transportation               | -22.64  		           | 0.0000    |
+| Energy Generation            | -10.96  		           | 0.0000    |
+| Total                        | -10.52                    | 0.0000    |
