@@ -1,7 +1,7 @@
-# Title: energy use data analysis
+# Title: energy use, data analysis
 # Author: Doug
 # Date Created: 8/18/2020
-# Last Updated: 9/1/2020
+# Last Updated: 9/10/2020
 
 import numpy as np
 import pandas as pd
@@ -193,3 +193,20 @@ ax.grid(axis='y')
 ax.tick_params(labelrotation=45, axis='x')
 
 plt.tight_layout()
+
+fig, ax=plt.subplots(figsize = (12, 8))
+
+pre_covid=ax.plot(dfr.date[:27], dfr.total_c[:27], 'c', label='Pre Covid')
+during_covid=ax.plot(dfr.date[26:], dfr.total_c[26:], 'm', label='During Covid')
+ax.set_xlabel('Time', fontsize = 18)
+# fig.autofmt_xdate(which='both')
+ax.set_ylabel('Energy Use, Trillion BTUs',fontsize = 18)
+ax.set_title('Total Energy Use',fontsize = 22, pad = 8, loc='left')
+ax.grid(axis='y')
+ax.legend(shadow=1, fontsize='large',loc=0)
+
+fig.autofmt_xdate(rotation=45)
+#turning border box off
+for spine in plt.gca().spines.values():
+    spine.set_visible(False)
+# plt.rcParams["font.family"] = "Palatino"

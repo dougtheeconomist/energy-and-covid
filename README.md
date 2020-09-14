@@ -18,9 +18,9 @@ As we can see from this graph, total use, which includes transportation uses suc
 
 ![breakdown_by_source](/images/sector_trends.png)
 
-As we see here it is predominantly the fall in industrial and transportation use that drives the change we see in the overall trend. While residential and commercial energy use are falling, they are doing so in line with the annual trends in those areas. In fact when compared to the typical use for the months of April and May, there was actually more energy use by residencies and commercial properties during covid. The increase in residential use makes sense since people are spending more time at home, but the slight increase in commercial usage is a surprise to see, especially with many businesses having temporarily closed during that time. 
+As we see here it is predominantly the fall in industrial and transportation use that drives the change we see in the overall trend. While residential and commercial energy use are falling, they are doing so in line with the annual trends in those areas. In fact, when compared to the typical use for the months of April and May, there was actually more energy use by residencies and commercial properties during covid. The increase in residential use makes sense since people are spending more time at home, but the slight increase in commercial usage is a surprise to see, especially with many businesses having temporarily closed during that time. 
 
-The following table shows the percentage difference between use in April 2020 and the typical use for the month of April since 2008, with a p-value generated against a null hypothesis that the 2020 numbers are actually the normal for that month, so the interpretation of this p-value is the chance that under normal conditions we would see either this or more extreme levels of consumption in the given sector.  
+The following table shows the percentage difference between use in April 2020 and the typical use for the month of April since 2008, with a p-value generated against a null hypothesis that the 2020 numbers are actually the normal for that month, so in this case, the smaller the p-value the more confidence we can have that the difference in question is a significant one. 
 
 
 March
@@ -33,6 +33,7 @@ March
 | Energy Generation            | -8.83%  		         | 0.0000    |
 | Total                        | -5.87%                  | 0.0002    |
 
+
 April
 |Sector			               | Difference from Average | P - Value |
 |------------------------------|:------------------------|:----------|
@@ -43,7 +44,6 @@ April
 | Energy Generation            | -11.61%  		         | 0.0000    |
 | Total                        | -13.03%                 | 0.0000    |
 
-As we can see from the higher p-values, the change in commercial and industrial use don't really fall outside of the range of normal use, 
 
 May
 |Sector			               | Difference from Average | P - Value |
@@ -54,3 +54,9 @@ May
 | Transportation               | -22.64%  		         | 0.0000    |
 | Energy Generation            | -10.96%  		         | 0.0000    |
 | Total                        | -10.52%                 | 0.0000    |
+
+While there are some values here that fall within the normal range of consumption for the time of year such as the commercial use in March and industrial use in May, by and large the level of energy utilization for most sectors is significantly different from what we typically see. It is safe to conclude that while transportation may be one of the biggest drivers, it is not the only industry who has broken from its normal energy use patterns. 
+
+The follow up question that this bring us to is then, how is this change in demand effecting the supply side of the energy equation? We have already seen that it has wreaked havoc on the prices of crude oil, but how have different types of generation i.e. different fossil fuel and clean energy sources changed their production levels? 
+
+Prior to looking at any of the data it is my intuitive assumption that energy sources such as solar, wind and hydroelectric would be least effected by the drop in demand. The reasoning for making this assumption is that because of a lower marginal operating cost due to cheaper inputs (sunlight and wind are cheaper than oil or coal) it makes sense from a cost efficiency standpoint to cut production from fossil fuel sources when needed.
