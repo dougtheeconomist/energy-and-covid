@@ -1,7 +1,7 @@
 # Title: energy use, data analysis
 # Author: Doug
 # Date Created: 8/18/2020
-# Last Updated: 9/10/2020
+# Last Updated: 9/15/2020
 
 import numpy as np
 import pandas as pd
@@ -194,6 +194,8 @@ ax.tick_params(labelrotation=45, axis='x')
 
 plt.tight_layout()
 
+
+#Total use graph
 fig, ax=plt.subplots(figsize = (12, 8))
 
 pre_covid=ax.plot(dfr.date[:27], dfr.total_c[:27], 'c', label='Pre Covid')
@@ -210,3 +212,26 @@ fig.autofmt_xdate(rotation=45)
 for spine in plt.gca().spines.values():
     spine.set_visible(False)
 # plt.rcParams["font.family"] = "Palatino"
+
+'''~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~'''
+#fossil vs revewables graph
+fig, ax=plt.subplots(figsize = (12, 8))
+
+pc_fossil=ax.plot(dfr.date[:27], dfr.tot_fossil_prcnt[:27],'b', linestyle= '-.', label='Pre Fossil')
+dc_fossil=ax.plot(dfr.date[26:], dfr.tot_fossil_prcnt[26:], 'r', linestyle= '-.', label='During Covid Fossil')
+
+pc_renew=ax.plot(dfr.date[:27], dfr.tot_renew_prcnt[:27], 'c', linestyle= '--', label='Pre Renewable')
+dc_renew=ax.plot(dfr.date[26:], dfr.tot_renew_prcnt[26:], 'm', linestyle= '--', label='During Covid Renewable')
+
+ax.set_xlabel('Time', fontsize = 18)
+# fig.autofmt_xdate(which='both')
+ax.set_ylabel('Percentage',fontsize = 18)
+ax.set_title('Percentage of Total Energy Generation',fontsize = 22, pad = 8, loc='left')
+ax.grid(axis='y')
+ax.legend(shadow=1, fontsize='large', bbox_to_anchor=(1.01, 1))
+# plt.ylim((0,1))
+plt.yticks(np.arange(0, 1.1, 0.1))
+fig.autofmt_xdate(rotation=45)
+#turning border box off
+for spine in plt.gca().spines.values():
+    spine.set_visible(False)

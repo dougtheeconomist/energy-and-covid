@@ -23,7 +23,7 @@ As we see here it is predominantly the fall in industrial and transportation use
 The following table shows the percentage difference between use in April 2020 and the typical use for the month of April since 2008, with a p-value generated against a null hypothesis that the 2020 numbers are actually the normal for that month, so in this case, the smaller the p-value the more confidence we can have that the difference in question is a significant one. 
 
 
-March
+## March
 |Sector			               | Difference from Average | P - Value |
 |------------------------------|:------------------------|:----------|
 | Residential  	               | -9.85% 		         | 0.0351    |
@@ -34,7 +34,7 @@ March
 | Total                        | -5.87%                  | 0.0002    |
 
 
-April
+## April
 |Sector			               | Difference from Average | P - Value |
 |------------------------------|:------------------------|:----------|
 | Residential  	               | 11.84% 	             | 0.0076    |
@@ -45,7 +45,7 @@ April
 | Total                        | -13.03%                 | 0.0000    |
 
 
-May
+## May
 |Sector			               | Difference from Average | P - Value |
 |------------------------------|:------------------------|:----------|
 | Residential  	               | 23.64% 	             | 0.0000    |
@@ -60,3 +60,9 @@ While there are some values here that fall within the normal range of consumptio
 The follow up question that this bring us to is then, how is this change in demand effecting the supply side of the energy equation? We have already seen that it has wreaked havoc on the prices of crude oil, but how have different types of generation i.e. different fossil fuel and clean energy sources changed their production levels? 
 
 Prior to looking at any of the data it is my intuitive assumption that energy sources such as solar, wind and hydroelectric would be least effected by the drop in demand. The reasoning for making this assumption is that because of a lower marginal operating cost due to cheaper inputs (sunlight and wind are cheaper than oil or coal) it makes sense from a cost efficiency standpoint to cut production from fossil fuel sources when needed.
+
+![gen_comparison](/images/f_v_r.png)
+
+When graphing generation breakdown between proportion of energy from fossil fuel and renewable generation, it seems that not only has fossil fuel generation decreased, but renewable generation has increased its share of overall generation, though this is likely more due to the fact that there is a large decrease in fossil fuel output rather than a jump in output from renewable sources. This can be verified in the next graph which displays the actual output levels for fossil fuels, renewables and the production total.  
+
+![production_graph](/images/production.png)
