@@ -66,3 +66,31 @@ Prior to looking at any of the data it is my intuitive assumption that energy so
 When graphing generation breakdown between proportion of energy from fossil fuel and renewable generation, it seems that not only has fossil fuel generation decreased, but renewable generation has increased its share of overall generation, though this is likely more due to the fact that there is a large decrease in fossil fuel output rather than a jump in output from renewable sources. This can be verified in the next graph which displays the actual output levels for fossil fuels, renewables and the production total.  
 
 ![production_graph](/images/production.png)
+
+## April
+|Production Source			   | Difference from Average | P - Value |
+|------------------------------|:------------------------|:----------|
+| Coal    	                   | -51.69% 		         | 0.0000    |
+| Crude Oil	                   | 30.84%  		         | 0.0036    |
+| Natural Gas	               | 31.96%  		         | 0.0000    |
+| Nat. Gas Liquids	           | 65.18%  		         | 0.0000    |
+| Nuclear	                   | 10.75%   		         | 0.0000    |
+| Hydro-Electric               | 11.06%  		         | 0.0099    |
+| Solar                        | 268.65%  		         | 0.0000    |
+| Wind                         | 61.31%                  | 0.0005    |
+| Biomass                      | -4.3%                   | 0.1642    |
+| Geothermal                   | 6.63%                   | 0.0001    |
+
+## May 
+|Production Source			   | Difference from Average | P - Value |
+|------------------------------|:------------------------|:----------|
+| Coal    	                   | -51.98% 		         | 0.0000    |
+| Crude Oil	                   | 26.55%  		         | 0.0082    |
+| Natural Gas	               | 27.93%  		         | 0.0001    |
+| Nat. Gas Liquids	           | 57.75%  		         | 0.0001    |
+| Nuclear	                   | 0.25%   		         | 0.8603    |
+| Hydro-Electric               | 0.96%  		         | 0.7953    |
+| Solar                        | 230.63%  		         | 0.0000    |
+| Wind                         | 77.29%                  | 0.0001    |
+| Biomass                      | -8.05%                  | 0.0188    |
+| Geothermal                   | 1.74%                   | 0.1094    |
