@@ -4,7 +4,7 @@
  
 The purpose of this exercise is to take a brief look at electricity consumption and generation trends during the beginning of the Covid-19 outbreak in the U.S. It is fairly common knowledge that gasoline consumption, and with it oil prices, have plummetted during the outbreak, and this peaked my curiosity as to what, if any, effect the pandemic is having on the electric grid. 
 
-As a refresher for anyone who hasn’t been following the trading price of crude oil throughout the summer, see the following graph, provided by the EIA.
+As a refresher for anyone who hasn’t been following the trading price of crude oil throughout the summer, prices took a collosal dive in the month of May and actually achieved negative levels for a brief period, as can be seen on the following graph, provided by the EIA. While there were several factors involved in this pricing inversion, one of them has been the drop in demand for gasoline due to the drop off in communting, and in that same vain this examination is aimed at seeing if other energy markets have seen similar upheaval due to our sudden and drastic change in living and working circumstances.
 
 ![eia_graph](/images/daily_oil_prices_eia.png)
 
